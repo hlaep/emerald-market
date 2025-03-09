@@ -1,0 +1,16 @@
+.top-img {
+  height: 12rem;
+  background-image: url('https://i.pinimg.com/736x/7a/cf/45/7acf45c81f030212466579be15a99e71.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+h6 {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: grey;
+}

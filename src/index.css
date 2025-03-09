@@ -1,0 +1,58 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #242424;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  height: 3rem;
+  width: 3rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  height: 1.8rem;
+  font-size: 1.2rem;
+}
+.trading-section input,
+.display-section input {
+  width: 3.5rem;
+  background: #8a8a8a;
+  color: white;
+}

@@ -1,0 +1,54 @@
+.exchange-rate-list {
+  margin: 1rem;
+}
+
+.exchange-rate-list ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.item-rate {
+  display: flex;
+  background: rgb(100, 100, 100);
+  width: 20rem;
+  border-radius: 6px;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  align-items: center;
+}
+
+.display-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.confirm-delete-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-item-btn {
+  cursor: pointer;
+}
+
+.add-item-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.grey-modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.603);
+  z-index: 99;
+}
