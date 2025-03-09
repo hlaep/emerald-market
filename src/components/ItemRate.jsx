@@ -7,11 +7,9 @@ import CancelEditButton from './CancelEditButton'
 
 const ItemRate = props => {
   const [showInput, setShowInput] = useState(false)
-  const [itemInputValue, setItemInputValue] = useState(
-    props.rate.itemAmount || ''
-  )
+  const [itemInputValue, setItemInputValue] = useState(props.itemAmount || '')
   const [emeraldInputValue, setEmeraldInputValue] = useState(
-    props.rate.emeraldAmount || ''
+    props.emeraldAmount || ''
   )
 
   const handleItemInputChange = event => {
@@ -25,7 +23,7 @@ const ItemRate = props => {
   return (
     <li className="item-rate">
       <div className="display-section">
-        <img src={props.rate.imgUrl} />
+        <img src={props.imgUrl} />
         {showInput ? (
           <input
             type="number"
@@ -35,7 +33,7 @@ const ItemRate = props => {
             onChange={handleItemInputChange}
           />
         ) : (
-          <p className="rate-display">{props.rate.itemAmount}</p>
+          <p className="rate-display">{props.itemAmount}</p>
         )}
       </div>
 
@@ -52,19 +50,24 @@ const ItemRate = props => {
             onChange={handleEmeraldInputChange}
           />
         ) : (
-          <p className="rate-display">{props.rate.emeraldAmount}</p>
+          <p className="rate-display">{props.emeraldAmount}</p>
         )}
       </div>
 
       {showInput ? (
         <div className="confirm-delete-buttons-container">
-          <ConfirmEditButton />
+          <ConfirmEditButton
+            setShowInput={setShowInput}
+            itemInputValue={itemInputValue}
+            emeraldInputValue={emeraldInputValue}
+            id={props.id}
+          />
           <CancelEditButton
             setShowInput={setShowInput}
             setEmeraldInputValue={setEmeraldInputValue}
             setItemInputValue={setItemInputValue}
-            emeraldAmount={props.rate.emeraldAmount}
-            itemAmount={props.rate.itemAmount}
+            emeraldAmount={props.emeraldAmount}
+            itemAmount={props.itemAmount}
           />
         </div>
       ) : (

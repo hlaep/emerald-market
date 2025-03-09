@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { initializeExchangeRates } from './localStorage'
 import Converter from './components/Converter'
-import ExchangeRateList from './components/ExchangeRateList'
+import ExchangeRatesList from './components/ExchangeRatesList'
 import './styles/App.css'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       </header>
       <Converter />
       <h2>Exchange rates</h2>
-      <ExchangeRateList />
+      <ExchangeRatesList />
     </>
   )
 }
