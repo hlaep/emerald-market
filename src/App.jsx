@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { initializeExchangeRates } from './localStorage'
 import Converter from './components/Converter'
 import ExchangeRateList from './components/ExchangeRateList'
 import './styles/App.css'
@@ -6,6 +7,7 @@ import './styles/App.css'
 function App() {
   useEffect(() => {
     document.title = 'Emerald Market'
+    initializeExchangeRates()
   }, [])
 
   return (

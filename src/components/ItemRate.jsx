@@ -7,15 +7,19 @@ import CancelEditButton from './CancelEditButton'
 
 const ItemRate = props => {
   const [showInput, setShowInput] = useState(false)
-  const [itemValue, setItemValue] = useState('')
-  const [emeraldValue, setEmeraldValue] = useState('')
+  const [itemInputValue, setItemInputValue] = useState(
+    props.rate.itemAmount || ''
+  )
+  const [emeraldInputValue, setEmeraldInputValue] = useState(
+    props.rate.emeraldAmount || ''
+  )
 
   const handleItemInputChange = event => {
-    setItemValue(event.target.value)
+    setItemInputValue(event.target.value)
   }
 
   const handleEmeraldInputChange = event => {
-    setEmeraldValue(event.target.value)
+    setEmeraldInputValue(event.target.value)
   }
 
   return (
@@ -27,11 +31,11 @@ const ItemRate = props => {
             type="number"
             min="0"
             className="rate-input"
-            value={itemValue}
+            value={itemInputValue}
             onChange={handleItemInputChange}
           />
         ) : (
-          <p className="rate-display">0</p>
+          <p className="rate-display">{props.rate.itemAmount}</p>
         )}
       </div>
 
@@ -44,11 +48,11 @@ const ItemRate = props => {
             type="number"
             min="0"
             className="rate-input"
-            value={emeraldValue}
+            value={emeraldInputValue}
             onChange={handleEmeraldInputChange}
           />
         ) : (
-          <p className="rate-display">0</p>
+          <p className="rate-display">{props.rate.emeraldAmount}</p>
         )}
       </div>
 
@@ -57,8 +61,10 @@ const ItemRate = props => {
           <ConfirmEditButton />
           <CancelEditButton
             setShowInput={setShowInput}
-            setEmeraldValue={setEmeraldValue}
-            setItemValue={setItemValue}
+            setEmeraldInputValue={setEmeraldInputValue}
+            setItemInputValue={setItemInputValue}
+            emeraldAmount={props.rate.emeraldAmount}
+            itemAmount={props.rate.itemAmount}
           />
         </div>
       ) : (
